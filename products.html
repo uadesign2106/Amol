@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products | Agreeculture & Pest Control</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div class="top-strip"><div class="container"><div>Best-selling crop solutions</div><div>Manager panel with add/edit/delete</div></div></div>
+  <header>
+    <div class="container nav-wrap">
+      <div class="brand">Agreeculture & Pest Control</div>
+      <div class="search-box"><input id="catalogSearch" type="search" placeholder="Search products by name/category" /></div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="products.html">Products</a></li><li><a href="industries.html">Industries</a></li><li><a href="contact.html">Contact</a></li><li><a href="careers.html">Careers</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="container">
+        <h1>Our Product Catalog</h1>
+        <p>Marketplace-style cards with pricing and category details.</p>
+        <div id="productCatalog" class="grid grid-4"></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Manager Login (Single User)</h2>
+        <p class="notice"><strong>Demo Credentials:</strong> username <code>manager</code>, password <code>Agri@123</code>.</p>
+        <p id="loginInfo" class="notice"></p>
+
+        <form id="loginForm" class="card" autocomplete="off">
+          <label>Username<input id="username" type="text" required /></label>
+          <label>Password<input id="password" type="password" required /></label>
+          <button class="btn" type="submit">Login</button>
+        </form>
+        <button id="logoutBtn" class="btn secondary" hidden>Logout</button>
+
+        <div id="adminPanel" hidden>
+          <h3>Manage Products (Permissions: Add, Edit, Delete)</h3>
+          <form id="productForm" class="card">
+            <input id="productId" type="hidden" />
+            <label>Name<input id="productName" required /></label>
+            <label>Category<input id="productCategory" required /></label>
+            <label>Description<textarea id="productDescription" rows="3" required></textarea></label>
+            <label>Selling Price<input id="productPrice" required /></label>
+            <label>MRP<input id="productMrp" required /></label>
+            <button class="btn" type="submit">Save Product</button>
+          </form>
+
+          <h3>Product Records</h3>
+          <table>
+            <thead><tr><th>Name</th><th>Category</th><th>Price</th><th>MRP</th><th>Actions</th></tr></thead>
+            <tbody id="adminProductsBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="container copyright">© 2026 Agreeculture & Pest Control Products & Services Business</div></footer>
+  <script src="assets/main.js"></script>
+  <script src="assets/products.js"></script>
+</body>
+</html>
