@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Products | Agreeculture & Pest Control</title><link rel="stylesheet" href="assets/styles.css" /></head>
+<body><header><div class="container header-wrap"><div class="brand">Agreeculture & Pest Control</div><nav><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="products.html">Products</a></li><li><a href="industries.html">Industries</a></li><li><a href="contact.html">Contact</a></li><li><a href="careers.html">Careers</a></li></ul></nav></div></header>
+<main>
+  <section>
+    <div class="container">
+      <h1>Products</h1>
+      <p>Browse our agriculture and pest control product portfolio.</p>
+      <div id="productCatalog" class="grid grid-3"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Product Manager Access</h2>
+      <p id="loginInfo" class="notice"></p>
+      <div class="notice warning"><strong>Demo credentials:</strong> username <code>manager</code> and password <code>Agri@123</code>.</div>
+      <form id="loginForm" class="card" autocomplete="off">
+        <label>Username<input id="username" type="text" required /></label>
+        <label>Password<input id="password" type="password" required /></label>
+        <button type="submit" class="btn">Login</button>
+      </form>
+      <button id="logoutBtn" class="btn secondary" hidden>Logout</button>
+
+      <div id="adminPanel" hidden>
+        <h3>Manage Products (Add/Edit/Delete)</h3>
+        <form id="productForm" class="card">
+          <input id="productId" type="hidden" />
+          <label>Name<input id="productName" type="text" required /></label>
+          <label>Category<input id="productCategory" type="text" required /></label>
+          <label>Description<textarea id="productDescription" rows="4" required></textarea></label>
+          <label>Price<input id="productPrice" type="text" required /></label>
+          <button class="btn" type="submit">Save Product</button>
+        </form>
+
+        <h3>Current Product Records</h3>
+        <table>
+          <thead><tr><th>Name</th><th>Category</th><th>Price</th><th>Actions</th></tr></thead>
+          <tbody id="adminProductsBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="container">© 2026 Agreeculture & Pest Control Products & Services Business</div></footer>
+<script src="assets/main.js"></script>
+<script src="assets/products.js"></script>
+</body></html>
